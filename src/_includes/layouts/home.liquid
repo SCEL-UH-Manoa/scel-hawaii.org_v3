@@ -1,0 +1,66 @@
+---
+layout: layouts/base.liquid
+---
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1>Smart Campus Energy Lab</h1>
+      <p>
+        We are a student-led lab at the University of Hawaiʻi at Mānoa, led by
+        <a href="http://www.ee.hawaii.edu/~kuh/info.html" target="_blank" rel="noopener">Dr. Anthony Kuh</a>
+        of Electrical Engineering.
+      </p>
+      <p>
+        Our goal is to support new technologies, techniques and products for sustainability and renewable
+        energy, by promoting teamwork, communication and lifelong learning.
+      </p>
+      <p class="hero-actions">
+        <a class="btn btn-sun" href="/students/">Join the lab</a>
+        <a class="btn btn-ghost" href="/research/">See our research</a>
+      </p>
+    </div>
+
+    <div class="slider" data-slider role="region" aria-roledescription="carousel" aria-label="Photos from the lab">
+      <div class="slides" tabindex="0">
+        {%- for s in slider %}
+        <figure class="slide">
+          <img src="{{ s.src }}" alt="{{ s.caption }}"{% unless forloop.first %} loading="lazy"{% endunless %} onerror="this.closest('.slide').remove()">
+          <figcaption>{{ s.caption }}</figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+      <div class="slider-ctl">
+        <button type="button" data-prev aria-label="Previous photo">&#8592;</button>
+        <button type="button" data-next aria-label="Next photo">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap home-grid">
+  <section aria-labelledby="proj-h">
+    <h2 id="proj-h">What we build</h2>
+    <ul class="proj-list">
+      {%- for p in projects %}
+      <li>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.description | firstSentences: 2 }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+    <p><a href="/research/">All research projects and papers</a></p>
+  </section>
+
+  <section aria-labelledby="news-h">
+    <h2 id="news-h">Recent news</h2>
+    <ul class="news-list">
+      {%- for post in collections.posts limit: 5 %}
+      <li>
+        <time datetime="{{ post.date | isoDate }}">{{ post.date | displayDate }}</time>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </li>
+      {%- endfor %}
+    </ul>
+    <p><a href="/news/">View all news</a></p>
+  </section>
+</div>

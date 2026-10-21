@@ -1,0 +1,41 @@
+---
+layout: layouts/base.liquid
+---
+<div class="wrap prose-page">
+  <header class="page-head"><h1>Members</h1></header>
+  <p class="jump">
+    <a href="#faculty">Faculty</a>
+    <a href="#leadership">Student leadership</a>
+    <a href="#mentors">Mentors</a>
+    <a href="#current">Current members</a>
+    <a href="#alumni">Alumni</a>
+  </p>
+
+  {%- assign groups = "Advisor|Leader|Mentor|Student" | split: "|" %}
+  {%- assign ids = "faculty|leadership|mentors|current" | split: "|" %}
+  {%- assign names = "Faculty|Student leadership|Mentors|Current members" | split: "|" %}
+  {%- for g in groups %}
+  {%- assign people = roster | byRole: g %}
+  {%- if people.size > 0 %}
+  <section class="people-group" id="{{ ids[forloop.index0] }}">
+    <h2>{{ names[forloop.index0] }}</h2>
+    <div class="people">
+      {%- for m in people %}{% render "layouts/person-card.liquid", m: m %}{% endfor %}
+    </div>
+  </section>
+  {%- endif %}
+  {%- endfor %}
+
+  <section class="people-group" id="alumni">
+    <h2>Alumni</h2>
+    <ul class="alumni">
+      {%- assign alumni = roster | byRole: "Inactive" %}
+      {%- for m in alumni %}
+      <li>
+        {%- if m.linkedin != "" %}<a href="{{ m.linkedin }}" target="_blank" rel="noopener">{{ m.name }}</a>{% else %}<span>{{ m.name }}</span>{% endif %}
+        {%- if m.major %}<small>{{ m.major }}</small>{% endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </section>
+</div>

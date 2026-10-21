@@ -1,0 +1,14 @@
+# Slider Images
+
+- src: "https://wiki.scel-hawaii.org/lib/exe/fetch.php?cache=&media=about:la_norm_2011.png"
+  caption: "Cranberry Weatherbox Design"
+
+- src: "/assets/img/slider/cranberry_pcb.png"
+  caption: "Cranberry Weatherbox Design"
+
+
+- src: "/assets/img/slider/dragonfruit.png"
+  caption: "Dragonfruit Weatherbox Design"
+
+- src: "/assets/img/slider/wind_sensor.jpg"
+  caption: "Wind Sensor Prototype"

@@ -1,0 +1,11 @@
+---
+layout: layouts/profile.liquid
+pagination:
+  data: roster
+  size: 1
+  alias: member
+permalink: "/people/{{ member.name | personSlug }}.html"
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: "{{ member.name }}"
+---

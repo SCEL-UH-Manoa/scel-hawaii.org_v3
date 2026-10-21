@@ -1,0 +1,25 @@
+---
+layout: layouts/base.liquid
+---
+<div class="wrap prose-page">
+  <header class="page-head">
+    <h1>Research</h1>
+    <p class="lede">Student teams design, build and test the hardware and software behind our campus sensor network.</p>
+  </header>
+  <div class="projects">
+    {%- for project in projects %}
+    <section class="project">
+      <h2>{{ project.name }}</h2>
+      <div>
+        <p>{{ project.description }}</p>
+        <ul class="links">
+          <li><a href="{{ project.wiki }}" target="_blank" rel="noopener">Lab wiki page</a></li>
+          {%- for paper in project.papers %}
+          <li><a href="{{ paper.href }}" target="_blank" rel="noopener">{{ paper.name }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </section>
+    {%- endfor %}
+  </div>
+</div>

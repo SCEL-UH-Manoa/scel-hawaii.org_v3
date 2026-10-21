@@ -1,0 +1,22 @@
+{
+  "name": "scel-hawaii-org",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Website for the Smart Campus Energy Lab at UH Manoa",
+  "type": "module",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7",
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/public-sans": "^5.3.0",
+    "js-yaml": "^5.5.0",
+    "markdown-it": "^15.0.3"
+  }
+}

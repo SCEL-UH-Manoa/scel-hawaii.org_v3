@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- assign pageTitle = title | default: site.title %}
+  <title>{% if title and title != site.title %}{{ title }} | {{ site.short }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ description | default: site.description | escape }}">
+  <meta property="og:title" content="{{ pageTitle | escape }}">
+  <meta property="og:description" content="{{ description | default: site.description | escape }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="theme-color" content="#0a3c43">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+  <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="brand" href="/" aria-label="{{ site.title }}, home">
+        <span class="brand-mark">SCEL</span>
+        <span class="brand-name">Smart Campus<br>Energy Lab</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          {%- for link in nav %}
+          <li><a href="{{ link.href }}"{% if page.url contains link.href %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <div>
+        <p class="foot-title">{{ site.title }}</p>
+        <p>
+          {%- for line in site.address %}{{ line }}<br>{% endfor -%}
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </p>
+      </div>
+      <p class="foot-links">
+        <a href="{{ site.wiki }}">Lab wiki</a>
+        <a href="{{ site.github }}">GitHub</a>
+        <a href="/feed.xml">RSS</a>
+      </p>
+      <p class="foot-small">A student-led lab at the University of Hawaiʻi at Mānoa.</p>
+    </div>
+  </footer>
+  <script src="/js/site.js" defer></script>
+</body>
+</html>

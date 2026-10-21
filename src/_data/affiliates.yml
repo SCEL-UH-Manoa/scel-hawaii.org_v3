@@ -1,0 +1,57 @@
+# Affiliates
+
+- title: "Johnson Controls"
+  img: "https://www.marketbeat.com/logos/jci_logo.jpg"
+  img_href: "http://www.johnsoncontrols.com/"
+  description: "Johnson Controls, Inc. is an American company globally offering
+                products and services to optimize energy and operational efficiencies
+                of buildings, automotive batteries, electronics and interior systems
+                for automobiles."
+  details: ""
+
+- title: "Raytheon"
+  img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Raytheon.svg/800px-Raytheon.svg.png"
+  img_href: "http://www.raytheon.com/"
+  description: "The Raytheon Company is a major American defense contractor and
+                industrial corporation with core manufacturing concentrations in
+                weapons and military and commercial electronics. It was previously
+                involved in corporate and special-mission aircraft until early 2007. "
+  details: ""
+
+- title: "National Science Foundation"
+  img: "https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG"
+  img_href: "http://www.nsf.gov/"
+  description: "The National Science Foundation (NSF) is an independent federal agency
+                created by Congress in 1950 \"to promote the progress of science
+                to advance the national health, prosperity, and welfare; to secure
+                the national defense…\""
+  details: ""
+
+- title: "Vertically Integrated Projects (VIP) Program"
+  img: "https://www.vip.gatech.edu/sites/default/files/vip-logo.png"
+  img_href: "http://www.vip.gatech.edu/vip-vertically-integrated-projects-program"
+  description: "The Vertically Integrated Projects (VIP) Program unites undergraduate education
+                and faculty research in a team-based context.  Undergraduate VIP students earn
+                academic credits, while faculty and graduate students benefit from the
+                design/discovery efforts of their teams."
+
+- title: "UH Manoa College of Engineering"
+  img_href: "http://www.eng.hawaii.edu/"
+  img: "https://www.ieeecss.org/CAB/conferences/cdc2012/images/manoa_uni.png"
+  description: "Nestled in idyllic Mānoa Valley in Honolulu, Hawai‘i, the University
+                of Hawai‘i at Mānoa is a leading center for higher learning throughout
+                the Pacific Rim. Currently, the university at-large has an enrollment
+                of over 20,000 and specifically, the College of Engineering supports
+                900 active students."
+  details: ""
+
+- title: "Renewable Energy and Island Sustainability (REIS)"
+  img_href: "http://manoa.hawaii.edu/reis/"
+  img: "https://manoa.hawaii.edu/sustainability/wp-content/uploads/2012/09/reis-logo2.jpg"
+  description: "The REIS Center was established in 2009 and funded through an internal University
+                of Hawai‘i at Manoa grant on sustainability. Faculty come from the College
+                of Engineering and eight other schools and colleges to work on cutting edge
+                research and education problems in renewable energy and island sustainability
+                (REIS)."
+  details: ""
+

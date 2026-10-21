@@ -1,0 +1,13 @@
+---
+layout: layouts/base.liquid
+---
+<article class="wrap prose-page">
+  <header class="page-head"><h1>{{ member.name }}</h1>
+    <p class="meta">{{ member.major }}{% if member.standing %}{% if member.major %}, {% endif %}{{ member.standing }}{% endif %}</p>
+  </header>
+  <div class="prose">
+    {%- if member.bio %}<p>{{ member.bio }}</p>{% endif %}
+    {%- if member.linkedin != "" %}<p><a href="{{ member.linkedin }}" target="_blank" rel="noopener">LinkedIn profile</a></p>{% endif %}
+    <p><a href="/members/">All members</a></p>
+  </div>
+</article>

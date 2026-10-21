@@ -1,0 +1,14 @@
+---
+layout: layouts/base.liquid
+---
+<div class="wrap prose-page">
+  <header class="page-head"><h1>News</h1></header>
+  <ul class="news-list">
+    {%- for post in collections.posts %}
+    <li>
+      <time datetime="{{ post.date | isoDate }}">{{ post.date | displayDate }}</time>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+    {%- endfor %}
+  </ul>
+</div>

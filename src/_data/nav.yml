@@ -1,0 +1,13 @@
+# Top navigation. Edit here and every page updates.
+- title: Research
+  href: /research/
+- title: Students
+  href: /students/
+- title: Members
+  href: /members/
+- title: News
+  href: /news/
+- title: Sponsors
+  href: /sponsors/
+- title: Contact
+  href: /contact/

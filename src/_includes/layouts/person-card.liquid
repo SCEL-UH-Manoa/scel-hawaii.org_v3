@@ -1,0 +1,12 @@
+<article class="person">
+  <div class="avatar" aria-hidden="true">
+    <span>{{ m.name | initials }}</span>
+    {%- assign ph = m.photo | hasPhoto %}{%- if ph %}<img src="{{ m.photo }}" alt="" loading="lazy" onerror="this.remove()">{% endif %}
+  </div>
+  <div class="person-body">
+    <h3>{{ m.name }}</h3>
+    {%- if m.major %}<p class="person-major">{{ m.major }}</p>{% endif %}
+    {%- if m.bio %}<p>{{ m.bio }}</p>{% endif %}
+    {%- if m.linkedin != "" %}<p><a href="{{ m.linkedin }}" target="_blank" rel="noopener">LinkedIn profile</a></p>{% endif %}
+  </div>
+</article>

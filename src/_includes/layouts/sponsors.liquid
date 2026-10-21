@@ -1,0 +1,24 @@
+---
+layout: layouts/base.liquid
+---
+<div class="wrap prose-page">
+  <header class="page-head">
+    <h1>Sponsors and partners</h1>
+    <p class="lede">The organizations that fund, host and collaborate with the lab.</p>
+  </header>
+  <ul class="affiliates">
+    {%- for a in affiliates %}
+    <li>
+      <div>
+        <h2>{{ a.title }}</h2>
+        <p>{{ a.description }}</p>
+        {%- if a.details != "" and a.details %}<p>{{ a.details }}</p>{% endif %}
+        <p><a href="{{ a.img_href }}" target="_blank" rel="noopener">Visit website</a></p>
+      </div>
+      <a class="logo" href="{{ a.img_href }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+        <img src="{{ a.img }}" alt="" loading="lazy" onerror="this.closest('.logo').hidden=true">
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</div>
