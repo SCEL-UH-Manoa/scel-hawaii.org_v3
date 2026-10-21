@@ -1,5 +1,6 @@
 import { load as loadYaml } from "js-yaml";
 import markdownIt from "markdown-it";
+import { HtmlBasePlugin } from "@11ty/eleventy";
 
 const TZ = "Pacific/Honolulu"; // the lab is in Hawaii; dates are shown in local time
 
@@ -28,6 +29,10 @@ export default function (eleventyConfig) {
     return defaultLink(tokens, idx, opts, env, self);
   };
   eleventyConfig.setLibrary("md", md);
+
+  // Rewrites root-relative links (/css/..., /research/) to honor --pathprefix, so the same
+  // build works at a domain root (scel-hawaii.org) or a subpath (github.io/repo-name/).
+  eleventyConfig.addPlugin(HtmlBasePlugin);
 
   // Static files copied as-is
   for (const p of ["assets", "css", "fonts", "js"]) {

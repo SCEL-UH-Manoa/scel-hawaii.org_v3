@@ -24,7 +24,12 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build
+      # Path prefix: on a github.io project URL the site lives under /<repo-name>/.
+      # Once the custom domain (scel-hawaii.org) is live, add a repository variable
+      # named PATH_PREFIX with the value / (Settings > Secrets and variables > Actions > Variables).
+      - run: npx @11ty/eleventy --pathprefix="$PATH_PREFIX"
+        env:
+          PATH_PREFIX: ${{ vars.PATH_PREFIX || format('/{0}/', github.event.repository.name) }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
